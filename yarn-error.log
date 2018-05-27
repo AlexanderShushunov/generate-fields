@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/ashushunov/.nvm/versions/node/v10.0.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js start ./example.js
+  /Users/ashushunov/.nvm/versions/node/v10.0.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js test
 
 PATH: 
   /Users/ashushunov/.nvm/versions/node/v10.0.0/bin:/Users/ashushunov/.jenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -17,8 +17,13 @@ npm manifest:
   {
     "name": "generate-fields",
     "version": "1.0.0",
-    "main": "index.js",
+    "author": "Alexander Shushunov <ashushunov@mail.ru>",
+    "description": "Script generates object with fields names by flow-type defenition",
     "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/AlexanderShushunov/generate-fields"
+    },
     "devDependencies": {
       "esm": "^3.0.38",
       "mocha": "^5.2.0",
@@ -26,7 +31,10 @@ npm manifest:
     },
     "scripts": {
       "test": "mocha -r esm ./**/*.test.mjs",
-      "start": "node --experimental-modules ./index.mjs"
+      "start": "node --experimental-modules ./src/index.mjs"
+    },
+    "engines": {
+      "node": "10.x"
     }
   }
 
@@ -179,9 +187,9 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 1
+  Exit code: 2
   Command: sh
-  Arguments: -c node --experimental-modules ./index.mjs ./example.js
+  Arguments: -c mocha -r esm ./**/*.test.mjs
   Directory: /Projects/vtb/generate-fields
   Output:
   

@@ -1,6 +1,7 @@
 export function parseFile(content) {
   return content
     .split('\n')
+    .filter(line => !/^\s*$/.test(line))
     .reduce(
       (acc, line) => {
         if (isType(line)) {
