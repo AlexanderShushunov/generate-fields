@@ -1,7 +1,7 @@
 // @flow
-import {BeneficiariesInformation} from './beneficiaries-information';
+import type {TypeA} from './type-a';
 
-export type QuestionnaireBeneficiariesInformation = {|
-    beneficiariesInformation: Array<BeneficiariesInformation>,
-    isConfirmed: boolean
+export type TypeB = {|
+  field1: Array<TypeA>,
+  field2: boolean
 |};
