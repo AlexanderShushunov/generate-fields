@@ -6,10 +6,10 @@ generateFields();
 
 async function generateFields() {
   const fileWithType = process.argv[2];
-  console.log(fileWithType);
+  console.log('file - ', fileWithType);
   const content = await fs.readFile(fileWithType, 'utf-8');
   const {typeName, fields} = await parseFile(content);
   const fieldsDefinition = makeDefinitions(typeName, fields);
-  console.log(fieldsDefinition);
+  console.log('result - ', fieldsDefinition);
   await fs.appendFile(fileWithType, fieldsDefinition);
 }

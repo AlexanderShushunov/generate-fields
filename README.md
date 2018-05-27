@@ -22,7 +22,7 @@ export type TypeB = {|
     field2: boolean
 |};
 
-export const TypeBFields: {[$Keys<TypeB>]: string] = {
+export const typeBFields: {[$Keys<TypeB>]: string] = {
     field1: 'field1',
     field2: 'field2'
 };

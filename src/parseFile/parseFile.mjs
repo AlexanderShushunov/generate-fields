@@ -43,5 +43,5 @@ export function parseField(line) {
 }
 
 export function isEndDefinition(line) {
-  return /\|\};/.test(line);
+  return /\|\}/.test(line);
 }
